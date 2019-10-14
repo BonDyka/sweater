@@ -7,10 +7,11 @@
     <span><a href="/user">User list</a></span>
 </div>
 <div>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <input type="hidden" name="_csrf" value="${_csrf.token}" />
         <input type="text" name="text" placeholder="Enter text..." />
         <input type="text" name="tag" placeholder="Enter tag..." />
+        <input type="file" name="file" />
         <button type="submit">Add message</button>
     </form>
 </div>
@@ -27,6 +28,11 @@
         <span>${message.text}</span>
         <i>${message.tag}</i>
         <strong>${message.authorName}</strong>
+        <div>
+            <#if message.filename??>
+                <img src="/img/${message.filename}" />
+            </#if>
+        </div>
     </div>
 <#else>
 No messages
