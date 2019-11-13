@@ -10,7 +10,7 @@ scp -i ~/.ssh/authorized-keys.pem \
 
 echo 'Restart server...'
 
-ssh -tt -i ~/.ssh/authorized-keys.pem ubuntu@35.158.177.216 << EOF
+ssh -i ~/.ssh/authorized-keys.pem ubuntu@35.158.177.216 << EOF
 
 pgrep java | xargs kill -9
 nohup java -jar sweater-0.1.1.jar > log.txt &
