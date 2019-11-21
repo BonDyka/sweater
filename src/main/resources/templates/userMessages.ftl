@@ -1,6 +1,10 @@
 <#import "parts/common.ftl" as c />
+<#import "parts/pager.ftl" as p />
 
 <@c.page>
+    <#if url??>
+        <@p.pager url  page />
+    </#if>
     <h3>${userChannel.username}</h3>
     <#if !isCurrentUser>
         <#if isSubscriber>
