@@ -17,17 +17,23 @@ import java.util.stream.Collectors;
 
 @Service
 public class UserService implements UserDetailsService {
-    @Autowired
+    //@Autowired
     private UserRepo userRepo;
 
-    @Autowired
+   // @Autowired
     private MailSender mailSender;
 
-    @Autowired
+    //@Autowired
     private PasswordEncoder passwordEncoder;
 
     @Value("${hostname}")
     private String hostname;
+
+    public UserService(UserRepo userRepo, MailSender mailSender, PasswordEncoder passwordEncoder) {
+        this.userRepo = userRepo;
+        this.mailSender = mailSender;
+        this.passwordEncoder = passwordEncoder;
+    }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
