@@ -2,7 +2,7 @@ package loc.abondarev.sweater.domain.dto;
 
 import loc.abondarev.sweater.domain.Message;
 import loc.abondarev.sweater.domain.User;
-import loc.abondarev.sweater.domain.util.MessageHelper;
+import loc.abondarev.sweater.util.MessageHelper;
 
 public class MessageDto {
     private Long id;

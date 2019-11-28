@@ -1,6 +1,6 @@
 package loc.abondarev.sweater.domain;
 
-import loc.abondarev.sweater.domain.util.MessageHelper;
+import loc.abondarev.sweater.util.MessageHelper;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;

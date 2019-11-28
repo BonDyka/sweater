@@ -1,4 +1,4 @@
-package loc.abondarev.sweater.domain.util;
+package loc.abondarev.sweater.util;
 
 import loc.abondarev.sweater.domain.User;
 
